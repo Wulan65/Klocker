@@ -8,7 +8,7 @@ Mouse movement alone does not wake it, and the wake input is consumed rather tha
 After a mouse click, the screen stays black until the button is released so neither half of the click reaches that application.
 Bouncing clock and date use the Windows regional format, with 120 px and 20 px text respectively and 15 px of visible space between them.
 Time is shown without seconds, and the system time/date are checked every five seconds.
-The overlay uses tight glyph bounds, with the clock frame sized to `00:00` or the wider formatted time when needed, and bounces at the visible text edge.
+The overlay uses tight glyph bounds, with the clock frame sized to 00:00 or the wider formatted time when needed, and bounces at the visible text edge.
 The clock starts in a randomly selected direction each time it launches.
 
 <img width="341" height="217" alt="klocker screenshot" src="https://github.com/user-attachments/assets/3d7ae72d-4e91-4cf5-b15a-243708e14b5b" />
