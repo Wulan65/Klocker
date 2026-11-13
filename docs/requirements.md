@@ -9,6 +9,8 @@ input wakes it.
 ## Current Scope
 
 - Provide a Windows executable written in Rust and named `klocker`.
+- Launch without a console window; show startup failures in a Windows error
+  dialog.
 - Cover the virtual desktop, including all monitors, with a fullscreen black
   window.
 - Display a bouncing clock and date overlay, formatted with the current Windows

@@ -1,3 +1,5 @@
+#![cfg_attr(target_os = "windows", windows_subsystem = "windows")]
+
 #[cfg(windows)]
 mod screensaver {
     use std::ffi::c_void;
@@ -254,6 +256,7 @@ mod screensaver {
         fn InvalidateRect(hwnd: Hwnd, rect: *const Rect, erase: Bool) -> Bool;
         fn KillTimer(hwnd: Hwnd, timer_id: Wparam) -> Bool;
         fn LoadCursorW(instance: Hinstance, cursor_name: *const u16) -> Hcursor;
+        fn MessageBoxW(hwnd: Hwnd, text: *const u16, caption: *const u16, kind: Uint) -> i32;
         fn PostQuitMessage(exit_code: i32);
         fn PostMessageW(hwnd: Hwnd, message: Uint, w_param: Wparam, l_param: Lparam) -> Bool;
         fn RegisterClassW(window_class: *const WindowClass) -> u16;
@@ -1121,6 +1124,14 @@ mod screensaver {
         run()
     }
 
+    pub fn show_error(message: &str) {
+        let message: Vec<u16> = message.encode_utf16().chain(std::iter::once(0)).collect();
+        let caption: Vec<u16> = "Klocker\0".encode_utf16().collect();
+        unsafe {
+            MessageBoxW(ptr::null_mut(), message.as_ptr(), caption.as_ptr(), 0x10);
+        }
+    }
+
     #[cfg(test)]
     mod tests {
         use super::*;
@@ -1206,7 +1217,7 @@ fn main() -> std::process::ExitCode {
     match screensaver::start() {
         Ok(()) => std::process::ExitCode::SUCCESS,
         Err(error) => {
-            eprintln!("Klocker failed: {error}");
+            screensaver::show_error(&format!("Klocker failed: {error}"));
             std::process::ExitCode::FAILURE
         }
     }

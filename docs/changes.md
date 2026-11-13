@@ -6,3 +6,4 @@
 2026-11-09 10:12 - Set a 15 px visible clock/date gap, removed seconds, and reduced system time/date polling to every five seconds.
 2026-11-09 10:25 - Switched to glyph-tight bounds, used `00:00` as the minimum clock width, and aligned the bounce to visible text edges.
 2026-11-09 10:32 - Randomized the clock's initial direction using the Windows system RNG while keeping its speed constant.
+2026-11-13 16:34 - Switched the Windows executable to the GUI subsystem to prevent a console window flashing at startup; startup failures now appear in an error dialog.
