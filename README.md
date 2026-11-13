@@ -13,6 +13,9 @@ seconds. The overlay uses tight glyph bounds, with the clock frame sized to
 text edge.
 The clock starts in a randomly selected direction each time it launches.
 
+<img width="341" height="217" alt="klocker screenshot" src="https://github.com/user-attachments/assets/3d7ae72d-4e91-4cf5-b15a-243708e14b5b" />
+
+
 ## Requirements
 
 Install the stable Rust toolchain with Cargo on Windows.
