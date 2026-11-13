@@ -11,6 +11,9 @@ Time is shown without seconds, and the system time/date are checked every five s
 The overlay uses tight glyph bounds, with the clock frame sized to 00:00 or the wider formatted time when needed, and bounces at the visible text edge.
 The clock starts in a randomly selected direction each time it launches.
 
+<img width="341" height="217" alt="klocker screenshot" src="https://github.com/user-attachments/assets/3b9ce3e2-2ec1-4c4f-a12b-d8abfc322c5a" />
+
+
 ## Requirements
 
 Install the stable Rust toolchain with Cargo on Windows.
