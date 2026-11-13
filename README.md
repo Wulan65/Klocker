@@ -2,7 +2,7 @@
 
 A lightweight Windows screen blanking application.
 
-It covers the desktop with a black screen with clock and date until a key is pressed or a mouse button is clicked.
+It covers the desktop with a black screen with bouncing clock and date until a key is pressed or a mouse button is clicked.
 
 Mouse movement alone does not wake it, and the wake input is consumed rather than passed to the application that was open beforehand.
 After a mouse click, the screen stays black until the button is released so neither half of the click reaches that application.
