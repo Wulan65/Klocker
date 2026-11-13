@@ -15,6 +15,12 @@ The clock starts in a randomly selected direction each time it launches.
 
 Install the stable Rust toolchain with Cargo on Windows.
 
+## Installation
+
+Copy .scr file to /windows/system32/
+Select screensaver in settings
+If you want to try it without these steps, just rename file to .exe and run it as is
+
 ## Run
 
 ```sh
